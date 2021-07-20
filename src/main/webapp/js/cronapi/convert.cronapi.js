@@ -26,6 +26,13 @@
     return new Blob( [blob], { type:mimeType });
   };
 
+/**
+ * @type function
+ * @name Converte arquivo em base64
+ * @description Convert file in base64
+ * @multilayer false
+ * @param {ObjectType.OBJECT} id: id do componente
+ */
   this.cronapi.myfunctions.convertFileToBase64 = function(/** @type {ObjectType.OBJECT} @description id: id do componente @blockType ids_from_screen*/ id, /** @type {ObjectType.STATEMENTSENDER} @description Retorno da função */ retorno) {
   var reader = new FileReader();
   var screen = this.cronapi.screen;
