@@ -25,7 +25,7 @@
       blob[i] = binary.charCodeAt(i);
     }
     return new Blob( [blob], { type:mimeType });
-  }
+  };
 
   this.cronapi.myfunctions.convertFileToBase64 = function(/** @type {ObjectType.OBJECT} @description id: id do componente @blockType ids_from_screen*/ id,
                                                         /** @type {ObjectType.STATEMENTSENDER} @description Retorno da função */ retorno) {
@@ -55,7 +55,7 @@
         retorno(null);
       }
   }
-}
+};
 
 /**
  * @type function
@@ -74,7 +74,7 @@ this.cronapi.myfunctions.downloadFile = function(/** @type {ObjectType.STRING} @
     alert("Não foi possível realizar o download do arquivo");
   }
    
-}
+};
 
 /**
  * @type function
@@ -92,7 +92,7 @@ this.cronapi.myfunctions.returnUrlToBlob = function(/** @type {ObjectType.STRING
     alert("Não foi possível visualizar o item");
     return "error";
   }
-}
+};
   
 
 }).bind(window)();
