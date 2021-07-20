@@ -16,8 +16,7 @@
    * @multilayer false
    * @returns {ObjectType.STRING}
    */
-  this.cronapi.myfunctions.base64ToBlob = function(/** @type {ObjectType.STRING} @description data: data */ data,
-                                                   /** @type {ObjectType.STRING} @description mimeType: mimeType */ mimeType) {
+  this.cronapi.myfunctions.base64ToBlob = function(/** @type {ObjectType.STRING} @description data: data */ data, /** @type {ObjectType.STRING} @description mimeType: mimeType */ mimeType) {
     let binary = atob(data);
     let buffer = new ArrayBuffer(binary.length);
     let blob = new Uint8Array(buffer);
@@ -27,8 +26,7 @@
     return new Blob( [blob], { type:mimeType });
   };
 
-  this.cronapi.myfunctions.convertFileToBase64 = function(/** @type {ObjectType.OBJECT} @description id: id do componente @blockType ids_from_screen*/ id,
-                                                        /** @type {ObjectType.STATEMENTSENDER} @description Retorno da função */ retorno) {
+  this.cronapi.myfunctions.convertFileToBase64 = function(/** @type {ObjectType.OBJECT} @description id: id do componente @blockType ids_from_screen*/ id, /** @type {ObjectType.STATEMENTSENDER} @description Retorno da função */ retorno) {
   var reader = new FileReader();
   var screen = this.cronapi.screen;
   var file = document.getElementById(id).files[0];
@@ -65,8 +63,7 @@
  * @param {ObjectType.STRING} blob: blob para download
  * @param {ObjectType.STRING} Nome: nome do arquivo
  */
-this.cronapi.myfunctions.downloadFile = function(/** @type {ObjectType.STRING} @description blob: blob para download */ blob,
-                                                 /** @type {ObjectType.STRING} @description filename: nome do arquivo */ filename) {
+this.cronapi.myfunctions.downloadFile = function(/** @type {ObjectType.STRING} @description blob: blob para download */ blob, /** @type {ObjectType.STRING} @description filename: nome do arquivo */ filename) {
   try {
     var finalURL = URL.createObjectURL(blob);
       this.cronapi.internal.downloadUrl(finalURL, filename);
